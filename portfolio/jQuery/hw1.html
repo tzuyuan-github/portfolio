@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HW1</title>
+  </head>
+  <body>
+    <!-- 5個容器放星星 -->
+    <img id="imgstar1" src="imgs/star.gif" />
+    <img id="imgstar2" src="imgs/star.gif" />
+    <img id="imgstar3" src="imgs/star.gif" />
+    <img id="imgstar4" src="imgs/star.gif" />
+    <img id="imgstar5" src="imgs/star.gif" />
+    <!-- 1個容器放結果 -->
+    <div class="display"></div>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+      // 滑鼠移入
+      $("img").mouseenter(function () {
+        const score=$(this).index()+1;
+        // 移入自己時自己亮
+        $(this).attr("src", "imgs/chngstar.gif");
+        // 移入自己時,自己以前的都亮,不包含自己
+        $(this).prevAll().attr("src", "imgs/chngstar.gif");
+        // 移入自己時,自己以後的都不亮,不包含自己
+        $(this).nextAll().attr("src", "imgs/star.gif");
+        // 打分中,文字呈現用text,中文加字串格式(`中文${變數}`)
+        $(".display").text(`打分中...${score}`);
+      });
+
+      // 滑鼠移出
+      $("img").mouseleave(function () {
+        // 移出自己時,自己不亮
+        $(this).attr("src", "imgs/star.gif");
+        // 移出自己時,自己以前的都不亮,不包含自己
+        $(this).prevAll().attr("src", "imgs/star.gif");
+        // 要求評分
+        $(".display").text(`請評分`);
+      });
+
+      //   點擊時,滑鼠移出事件取消,也就是點擊後會恆亮
+      $("img").click(function () {
+        const score=$(this).index()+1;
+        $(this).off("mouseleave");
+        // 確定分數
+        $(".display").text(`您給${score}顆星`);
+      });
+    </script>
+  </body>
+</html>

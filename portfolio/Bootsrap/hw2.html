@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,	initial-scale=1" />
+    <title>HW2</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/hw2.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- nav列(logo,Home,Explore,Notifications,Messages,Bookmarks,List,Profile) -->
+    <nav style="background-color:rgba(128, 97, 156, 0.699)">
+      <div
+        class="container d-flex justify-content-center align-items-center mt-3">
+        <div>
+        <img
+          src="./imgs/twitterLogo.png"
+          alt="logo"
+          title="Twitter"
+          width="30px"
+          class="twitter me-5"/>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center">
+        <i class="fa-solid fa-house-chimney-window me-1"
+          style="color: rgba(84, 45, 125, 0.811);"
+        ></i>
+        <h3 class="title me-5" style="color:  rgba(84, 45, 125, 0.811);">Home</h3>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center">
+        <i class="fas fa-hashtag me-1" style="color:  rgba(84, 45, 125, 0.811);"></i>
+        <h3 class="title me-5" style="color:  rgba(84, 45, 125, 0.811);">Explore</h3>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center">
+        <i class="far fa-bell me-1" style="color:  rgba(84, 45, 125, 0.811);"></i>
+        <h3 class="title me-5" style="color:  rgba(84, 45, 125, 0.811);">Notifications</h3>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center">
+        <i class="fas fa-envelope me-1" style="color:  rgba(84, 45, 125, 0.811);"></i>
+        <h3 class="title me-5" style="color:  rgba(84, 45, 125, 0.811);">Messages</h3>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center">
+        <i class="fa-regular fa-bookmark me-1" style="color:  rgba(84, 45, 125, 0.811);"></i>
+        <h3 class="title me-5" style="color:  rgba(84, 45, 125, 0.811);">Bookmarks</h3>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center">
+        <i class="fa-solid fa-bars me-1" style="color:  rgba(84, 45, 125, 0.811);"></i>
+        <h3 class="title me-5" style="color:  rgba(84, 45, 125, 0.811);">List</h3>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center">
+        <i class="fa-solid fa-id-card-clip me-1"
+          style="color:  rgba(84, 45, 125, 0.811);"
+          ></i>
+        <h3 class="title me-5" style="color:  rgba(84, 45, 125, 0.811);">Profile</h3>
+        </div>
+
+        <div
+          class="h-50 w-50 rounded-pill bg-light border border-secondary text-light fs-6"
+        >
+          <span class="p-3">
+            <i class="fas fa-search fa-xs" style="color:  rgba(61, 33, 92, 0.915);"></i>
+          </span>
+        </div>
+
+        <div class="profile">
+          <img
+            src="./imgs/kuromiIcon.jpeg"
+            alt="profile"
+            class="rounded-circle h-50 w-50 m-2"
+          />
+          <i class="fas fa-chevron-down" style="color: rgba(61, 33, 92, 0.915);"></i>
+        </div>
+      </h4>
+    </nav>
+
+    <!-- section -->
+    <div
+      class="post w-100 d-flex flex-row justify-content-center px-3 m-5">
+      <!-- box1 -->
+      <div class="box1 w-75">
+        <div class="d-flex border-bottom p-2" style="color: #000000;">
+          <!-- headshot -->
+          <div class="headshot w-25 h-25 rounded-circle mx-1">
+            <img
+              src="./imgs/kuromiIcon.jpeg"
+              class="rounded-circle w-100 h-100"
+              alt=""/>
+          </div>
+          <!-- post1 -->
+          <div class="w-100 h-100 px-3">
+            <!-- post-account -->
+            <div class="w-100 h-100 " style="color: rgba(61, 33, 92, 0.915);">
+              <span class="fw-bold">kuromi950608</span>
+              <span class="text-secondary">@kuromichan</span>
+              <span class="text-secondary">．</span>
+              <span class="text-secondary">3m</span>
+            </div>
+            <!-- post-words -->
+            <div
+              class="w-100 h-100  overflow-hidden"
+            >
+            「サンリオキャラクターズ×Etoile et Griotte（エトワール エ グリオット）」のグッズが登場！
+マスコットやクリアファイル、ポーチやトートバッグなど、キュートなアイテムが勢揃い♪
+普段使いはもちろん、コレクションするのもオススメだよ♡
+さらに、コラボグッズを2,500円以上お買い上げごとに、限定クリアカード（全8種・ランダム）を1枚プレゼント！
+9月29日（金）から、キデイランド5店舗で発売するよ♪
+また、原宿キデイランドオンラインショップは、店舗発売に先駆けて、9月25日（月）12:00から先行予約をスタート☆
+ぜひチェックしてね！
+
+#スマホ
+#ぬいぐるみ
+#ポーチ
+            </div>
+            <!-- post-img -->
+            <div class="img rounded">
+              <img
+                src="./imgs/kuromiPost.jpeg"
+                class="w-100 h-100 rounded"
+                alt=""
+              />
+            </div>
+            <div class="m-2" style="color:rgba(61, 33, 92, 0.915);">more</div>
+            <!-- post-comment,share,like,save -->
+            <div class="titleicon m-2">
+              <i class="fas fa-comment me-5" style="color:rgba(61, 33, 92, 0.915);">30</i>
+              <i class="fas fa-retweet me-5" style="color: rgba(61, 33, 92, 0.915);">15</i>
+              <i class="far fa-heart me-5" style="color: rgba(61, 33, 92, 0.915);">700</i>
+              <i class="fas fa-upload" style="color: rgba(61, 33, 92, 0.915);"></i>
+            </div>
+          </div>
+          <!-- post end -->
+        </div>
+
+        <div class="d-flex border-bottom p-2" style="color: #000000;">
+          <!-- headshot -->
+          <div class="headshot w-25 h-25 rounded-circle mx-1">
+            <img
+              src="./imgs/kuromiIcon.jpeg"
+              class="rounded-circle w-100 h-100"
+              alt=""/>
+          </div>
+          <!-- post2 -->
+          <div class="w-100 h-100 px-3">
+            <!-- post-account -->
+            <div class="w-100 h-100 " style="color: rgba(61, 33, 92, 0.915);">
+              <span class="fw-bold">kuromi950608</span>
+              <span class="text-secondary">@kuromichan</span>
+              <span class="text-secondary">．</span>
+              <span class="text-secondary">1d</span>
+            </div>
+            <!-- post-words -->
+            <div
+              class="w-100 h-100  overflow-hidden"
+            >ドン・キホーテ限定！
+            マイメロディとクロミのガーリーワンピースシリーズに新作が登場したよ☆
+            「真夜中＆秘密メロクロ 布帛ワンピース」（全4種）と「真夜中のメロクロ なりきりワンピース4点セット」（全2種）の2アイテムで、フリルやリボンを使ったデザインがとっても魅力的♡
+            それぞれハンガー付きなのもうれしいね♪
+            なりきりワンピースは、エプロン、ヘッドドレス、リボンorチョーカー付きの豪華4点セットだよ！
+            お友だちとお揃いにして、メロクロコーデでハロウィーンコスを楽しんじゃお♡
+            ドン・キホーテの取り扱い店舗で発売中♡
+            ぜひチェックしてね♪
+            
+            グッズ
+            
+            </div>
+            <!-- post-img -->
+            <div class="img rounded">
+              <img
+                src="./imgs/kuromiPost2.png"
+                class="w-100 h-100 rounded"
+                alt=""
+              />
+              <div class="m-2" style="color:rgba(61, 33, 92, 0.915);">more</div>
+            </div>
+
+            <!-- post-comment,share,like,save -->
+            <div class="titleicon m-2">
+              <i class="fas fa-comment me-5" style="color:rgba(61, 33, 92, 0.915);">99</i>
+              <i class="fas fa-retweet me-5" style="color: rgba(61, 33, 92, 0.915);">70</i>
+              <i class="far fa-heart me-5" style="color: rgba(61, 33, 92, 0.915);">1688</i>
+              <i class="fas fa-upload" style="color: rgba(61, 33, 92, 0.915);"></i>
+            </div>        
+          </div>
+          <!-- post end -->
+        </div>
+
+        <div class="d-flex border-bottom p-2" style="color: #000000;">
+          <!-- headshot -->
+          <div class="headshot w-25 h-25 rounded-circle mx-1">
+            <img
+              src="./imgs/kuromiIcon.jpeg"
+              class="rounded-circle w-100 h-100"
+              alt=""/>
+          </div>
+          <!-- post3 -->
+          <div class="w-100 h-100 px-3">
+            <!-- post-account -->
+            <div class="w-100 h-100 " style="color: rgba(61, 33, 92, 0.915);">
+              <span class="fw-bold">kuromi950608</span>
+              <span class="text-secondary">@kuromichan</span>
+              <span class="text-secondary">．</span>
+              <span class="text-secondary">7d</span>
+            </div>
+            <!-- post-words -->
+            <div
+              class="w-100 h-100  overflow-hidden"
+            >10月31日のクロミお誕生日を記念して、いろんなイベントや商品で盛り上がる「#世界クロミ化WEEK」を、9月から11月にかけて開催するよ！
+            #世界クロミ化WEEK POP UP SHOPや、クロミの新コスチュームなど、盛りだくさんのラインナップ☆
+            詳しくは下記をチェックしてね♡
+            #スマホ
+            #ぬいぐるみ
+            
+            </div>
+            <!-- post-img -->
+            <div class="img rounded">
+              <img
+                src="./imgs/kuromiPost3.jpeg"
+                class="w-100 h-100 rounded"
+                alt=""
+              />
+              <div class="m-2" style="color:rgba(61, 33, 92, 0.915);">more</div>
+            </div>
+
+            <!-- post-comment,share,like,save -->
+            <div class="titleicon m-2">
+              <i class="fas fa-comment me-5" style="color:rgba(61, 33, 92, 0.915);">57</i>
+              <i class="fas fa-retweet me-5" style="color: rgba(61, 33, 92, 0.915);">30</i>
+              <i class="far fa-heart me-5" style="color: rgba(61, 33, 92, 0.915);">1070</i>
+              <i class="fas fa-upload" style="color: rgba(61, 33, 92, 0.915);"></i>
+            </div>        
+          </div>
+          <!-- post end -->
+      </div> 
+    </div>    
+    <!-- section -->
+    <div
+      class="post w-100 d-flex flex-row justify-content-center px-3  ">
+      <!-- box2 -->
+      <div class="box2">
+        <!-- Trends -->
+        <div class="w-100 ms-3 pt-2 ">
+          <div class="fw-bolder fs-4 m-2 border-bottom" >Trends for you</div>
+
+          <div class="border-bottom  m-2">
+            <div class="text-secondary fw-lighter">Trending worldwide</div>
+            <div class="fw-bolder">#BreakingNews</div>
+            <div class="fw-lighter" style="color: #a3a2a3;">10,999 people are Tweeting about this</div>
+          </div>
+
+          <div class="border-bottom m-2">
+            <div class="text-secondary fw-lighter">Trending worldwide</div>
+            <div class="fw-bolder">#WorldNews</div>
+            <div class="fw-lighter" style="color: #a3a2a3;">21,345 people are Tweeting about this</div>
+          </div>
+
+          <div class="border-bottom m-2">
+            <div class="text-secondary fw-lighter">Trending worldwide</div>
+            <div class="fw-bolder">#BreakingNews</div>
+            <div class="fw-lighter" style="color: #a3a2a3;">5,326 people are Tweeting about this</div>
+          </div>
+
+          <div class="border-bottom m-2">
+            <div class="text-secondary fw-lighter">Trending worldwide</div>
+            <div class="fw-bolder">#BreakingNews</div>
+            <div class="fw-lighter" style="color: #a3a2a3;">11,770 people are Tweeting about this</div>
+          </div>
+
+          <div class="border-bottom m-2">
+            <div class="text-secondary fw-lighter">Trending worldwide</div>
+            <div class="fw-bolder">#GreatestOfAllTime</div>
+            <div class="fw-lighter" style="color: #a3a2a3;">7,878 people are Tweeting about this</div>
+          </div>
+
+          <div class="more m-2" style="color: #502c5ceb;">more</div>
+        </div>
+
+        <div class="ms-3 pt-2">
+          <div class="text-secondary px-1">
+            <span>Privacy Policies</span>
+            <span>Cookie</span>
+            <span>Advertisement</span>
+            <div
+              >More
+              <i class="fas fa-angle-down" style="color: #959090"></i>
+            </div>
+          </div>
+
+          <div class="text-light-emphasis px-1">
+            <i class="far fa-copyright"></i> 2023 Twitter, Inc.
+          </div>
+        </div>
+
+        <!-- button -->
+        <div class="container">
+
+          <button class="case1 w-50">
+              <span class="case2"><i id="aa" class="fas fa-feather fa-lg fa-5x fs-6" style="color: #ffffff;"></i></span>
+              <span class="case3"><i class="fas fa-plus fs-6"></i></span>       
+              <span class="case4 fs-6">Tweets</span>     
+          </button>
+      </div>
+
+
+
+
+
+      </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

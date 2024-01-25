@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>九九乘法表</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: auto;
+        font-family: "Noto Sans TC", sans-serif;
+      }
+      .container {
+        width: 1000px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h2 {
+        width: 1000px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        color: rgba(100, 76, 121, 0.813);
+        background-color: cadetblue;
+        margin: 50px;
+        border-radius: 50%;
+      }
+      .box {
+        width: 333px;
+        height: 333px;
+        background-color: rgba(141, 115, 164, 0.858);
+        text-align: center;
+        margin: 5px;
+        border-radius: 10px;
+        /* 垂直並排 */
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>九九乘法表</h2>
+    </div>
+    <!-- 設置container讓畫面置中 -->
+    <div class="container">
+      <!-- 設置9個區塊放置乘法表 -->
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <script>
+      // 設定兩個變數，a=乘數， b=被乘數，用陣列呈現資料
+      var a = [1, 2, 3, 4, 5, 6, 7, 8, 9]; //乘數
+      var b = [1, 2, 3, 4, 5, 6, 7, 8, 9]; //被乘數
+      var el = document.querySelectorAll(".box"); //選擇全部的 box
+
+      var aLen = a.length; // console.log(aLen);在console上為9
+      var bLen = b.length; // console.log(bLen);在console上為9
+
+      // 使用 for 迴圈來計算乘數與被乘數
+      for (var i = 0; i < aLen; i++) {
+        //乘數迴圈
+        // 將結果填入字串
+        var str = "";
+        for (var j = 0; j < bLen; j++) {
+          //被乘數迴圈
+
+          // 組字串
+          var count = a[i] + "x" + b[j] + "=" + a[i] * b[j]; // console.log(count);
+
+          //將結果套回 str
+          // 加法賦值運算符（ += ）將右操作數的值添加到變量
+          str += "<div>" + count + "</div>";
+
+          // 將 box 裡的乘數，透過 innerHTML 渲染於網頁
+          el[i].innerHTML = str;
+        }
+      }
+    </script>
+  </body>
+</html>

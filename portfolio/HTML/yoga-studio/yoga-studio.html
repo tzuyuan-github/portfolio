@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>瑜伽工作室開幕</title>
+  <link href="css/style.css" type="text/css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    $(function() {
+      $("#page-top a").click(function() {
+        $('html,body').animate({scrollTop: 0}, 1000);
+        return false;
+      });
+    });
+  </script>
+
+  <script>
+    function fncBMI() {
+      var bmi, w, h; //BMI=bmi, 體重=w, 身高=h
+      w = eval(document.bmi.bmiWeight.value);
+      h = eval(document.bmi.bmiHeight.value) / 100; //變換為m
+      bmi = w / (h * h);
+      alert('你的BMI 值是' + bmi + '。');
+      document.bmi.bmiAns.value = bmi;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>瑜伽工作室○月○日（日）開幕！ 月費2,500日圓</h1>
+    <figure>
+      <img src="images/yoga-woman.jpg" alt="瑜伽工作室開幕">
+      <figcaption>用瑜伽來調整心靈和身體的平衡吧！</figcaption>
+    </figure>
+    <p><a href="#cta">現在馬上報名</a></p>
+  </header>
+  <main>
+    <p><h2>其實，<span class="yellow-futo">30 多歲以上的
+人</span>正開始練瑜伽。</h2>
+    <div class="cv-contents">
+       <figure>
+         <img src="images/yoga-cv.jpg" alt="會員心聲">
+         <figcaption>身體的平衡感也會提升！</figcaption>
+       </figure>
+      <blockquote class="clearfix"><h3>體質有了改變的會員心
+聲</h3>
+      肩膀不再僵硬了（30 多歲）<br>最近不會閃到腰了！（40
+多歲）</blockquote>
+    </div>
+    </p>
+    <p><h3>可以期待的效果！</h3>
+    針對突出的<big><strong>小腹</strong></big>！</p>
+    <form name="bmi">
+      <p>最近很在意體型的你，來看看自己的BMI值吧！<br>
+      『BMI＝體重(kg)÷身高(m)×身高(m)』</p>
+      体重：<input type="text" name="bmiWeight">kg<br>
+      身長：<input type="text" name="bmiHeight">cm
+      <input type="button" value="計算" onclick="fncBMI()"><br>
+      結果：<input type="text" name="bmiAns">
+    </form>
+    <p id="page-top"><a href="#">回到畫面頂端</a></p>
+    <p class="kadomaru-box">練瑜伽還有其他三個效果！</p>
+    <p><ul>
+      <li>恢復情緒</li>
+      <li>舒展軀幹</li>
+      <li>排毒</li>
+    </ul></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/N4k2SKL0vvM?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p id="cta"><a target="_blank" href="https://www.google.co.jp">報名點選這裡</a></p>
+  </main>
+  <footer>
+    <small>&copy;2019 hibi-yoga-studio.</small>
+  </footer>
+</body>
+</html>

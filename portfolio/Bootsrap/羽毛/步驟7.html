@@ -1,0 +1,72 @@
+<!doctype	html>
+<html	lang="en">
+    <head>
+        <meta	charset="utf-8">
+        <meta	name="viewport"	content="width=device-width,	initial-scale=1">
+        <title>我的BS5.3.1版型</title>
+        <link	rel="stylesheet"	href="../css/bootstrap.min.css">        
+        <link rel="stylesheet" href="../css/hw20909.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    *{
+        color: rgb(255, 255, 255);
+    }
+    /* 這邊先改box1  變成我要的圓框 */
+    .box1{
+        width: 200px;
+        height: 55px;
+        background: #751515;
+         border-radius: 20px;
+        position: relative;
+    }
+
+
+    
+    .box2{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .box3{
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+    }
+
+    .box4{
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+    }
+
+        /* 把羽毛放大 所以要給羽毛一個ID 叫做aa  用font-size來變大   */
+        /* 羽毛變大了  但是要移位  不然上面會被裁切   */
+        /* 所以要加上 top  請看下一個步驟 */
+    #aa{
+        font-size: 50px;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <button class="box1">
+        <span class="box2"><i id="aa" class="fas fa-feather fa-lg fa-5x" style="color: #ffffff;"></i></span>
+        <span class="box3"><i class="fas fa-plus"></i></span>    
+        <span class="box4">推文</span>     
+    </button>
+</div>
+    
+
+
+      <script	src="./js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>  

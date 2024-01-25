@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>使用ul設計側邊選單</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    /* 側邊欄 */
+    aside {
+      width: 180px;
+    }
+
+    h3 {
+      width: 100%;
+      height: 50px;
+      /* vertical-align只對表格儲存格有效，所以設line-height */
+      line-height: 50px;
+      text-align: center;
+      background-color: rgba(51, 46, 54, 0.699);
+      color: rgb(255, 255, 255);
+      margin: 0;
+      padding: 5px;
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    .subnav {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 超連結 */
+    .subnav li a {
+      /* 清除預設樣式(超連結底線) */
+      text-decoration: none;
+      color: black;
+      width: 100%;
+      height: 50px;
+      padding: 5px;
+      /* 行內轉區塊 */
+      display: block;
+      /* 縮排 */
+      text-indent: 52px;
+      /* 行高 */
+      line-height: 50px;
+      /* 文字 */
+      font-size: 18px;
+      font-family: 'Noto Sans TC', sans-serif;
+      /* 背景 */
+      background-color: rgba(132, 115, 155, 0.842);
+      /* 分隔底線 */
+      border-bottom: 1.5px solid #595959;
+    }
+
+    /* 滑鼠經過 */
+    .subnav li a:hover {
+      width: 175px;
+      color: rgb(231, 228, 235);
+      background-color: rgba(85, 60, 95, 0.884);
+      /* 左邊線條 */
+      border-left: #00000056 5px solid;
+    }
+  </style>
+</head>
+
+<body>
+  <aside>
+    <h3>貓咪品種</h3>
+    <ul class="subnav">
+      <li><a href="#">蘇格蘭折耳貓</a></li>      
+      <li><a href="#">英國短毛貓</a></li>
+      <li><a href="#">美國短毛貓</a></li>
+      <li><a href="#">異國短毛貓</a></li>
+      <li><a href="#">俄羅斯藍貓</a></li>
+      <li><a href="#">挪威森林貓</a></li>
+      <li><a href="#">米克斯</a></li>
+      <li><a href="#">布偶貓</a></li>
+      <li><a href="#">暹羅貓</a></li>
+      <li><a href="#">波斯貓</a></li>
+      <li><a href="#">緬因貓</a></li>
+
+    </ul>
+  </aside>
+
+</body>
+
+</html>

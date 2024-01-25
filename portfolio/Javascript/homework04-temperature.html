@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>攝氏轉華氏</title>
+    <!-- 請設計一個function，傳入攝氏溫度可以轉成華氏溫度，傳入華氏溫度可 以轉成攝氏溫度 -->
+  </head>
+  <body>
+    <!-- select下拉式選單、option選項 -->
+    <select name="" id="select">
+      <option value="1" class="tempC">攝氏</option>
+      <option value="2" class="tempF">華氏</option>
+    </select>
+    <input type="number" class="temp" />度
+    <button onclick="transform()">轉換</button>
+    <div class="display"></div>
+    <script>
+      // 宣告變數可拿到option的值
+      const select = document.querySelector("#select");
+      // 宣告變數可拿到input的值
+      const temp = document.querySelector(".temp");
+      //   宣告display的變數
+      const display = document.querySelector("display");
+
+      function transform() {
+        // select的兩個選項的排序值
+        const selectNum = +select.value;
+        // input輸入的溫度字串轉成數值
+        const tempNum = +temp.value;
+        // 選擇下拉數值1
+        if (selectNum == 1) {
+          // 小數點第幾位toFixed()
+          // 攝氏轉華氏(攝氏 * 9) / 5 + 32
+          let tempF = ((tempNum * 9) / 5 + 32).toFixed(2);
+          display.innerHTML = `華氏${tempF}度`;
+        } else if (selectNum == 2) {
+          // 華氏轉攝氏((華氏-32)*5)/9
+          let tempC = (((tempNum - 32) * 5) / 9).toFixed(2);
+          display.innerHTML = `攝氏${tempC}度`;
+        }
+      }
+    </script>
+  </body>
+</html>

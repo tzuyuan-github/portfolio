@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI</title>
+  </head>
+  <body>
+    <!-- 標題-前言-表單、btn-計算結果對照BMI範圍 -->
+    <div>
+      <h2>你的BMI是多少？</h2>
+
+      <form name="bmi">
+        <p>
+          現在馬上來試算看看吧！<br />
+          『BMI＝體重(kg)÷身高(m)×身高(m)』
+        </p>
+        <!-- onclick 事件，用來觸發某種 JavaScript 動作，可以用在表單或網頁內的某處 -->
+        體重：<input type="text" name="bmiWeight" />kg<br />
+        身高：<input type="text" name="bmiHeight" />cm
+        <input type="button" value="計算BMI" onclick="fncBMI()" /><br />
+        結果：<input type="text" name="bmiAns" />
+
+        <p>
+          BMI= 體重(公斤)/身高(公尺)的平方 BMI < 18.5:過輕 18.5≦BMI<24:正常
+          24≦BMI<27:過重 27≦BMI<30:輕度肥胖 30≦BMI<35:中度肥胖 BMI≧35:重度肥胖
+        </p>
+      </form>
+    </div>
+
+    <script>
+      // fnc是變數
+      function fncBMI() {
+        var bmi; //BMI
+        var w; //體重
+        var h; //身高
+        // eval() 函數會將傳入的字符串當做 JavaScript 代碼進行執行
+        w = eval(document.bmi.bmiWeight.value);
+        //換算為公尺
+        h = eval(document.bmi.bmiHeight.value) / 100;
+
+        bmi = w / (h * h);
+
+        document.bmi.bmiAns.value = bmi;
+      }
+    </script>
+  </body>
+</html>

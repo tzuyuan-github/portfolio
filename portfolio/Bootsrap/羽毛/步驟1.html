@@ -1,0 +1,55 @@
+<!doctype	html>
+<html	lang="en">
+    <head>
+        <meta	charset="utf-8">
+        <meta	name="viewport"	content="width=device-width,	initial-scale=1">
+        <title>我的BS5.3.1版型</title>
+        <link	rel="stylesheet"	href="../css/bootstrap.min.css">        
+        <link rel="stylesheet" href="../css/hw20909.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+        *{
+        margin: 0;
+        color: black;
+        }
+
+        .box1{
+            width: 600px;
+            height: 400px;
+            background: #751515;
+            
+        }
+
+        .box2{
+            width: 300px;
+            height: 300px;
+            background: rgb(250, 217, 135);
+        }
+
+        .box3{
+            width: 120px;
+            height: 120px;
+            background: lightskyblue;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- 首先 我們先了解position 如果我沒有加上position會長這樣-->
+        <!-- 因為box2跟box3被涵蓋在box1裡面  但box2跟box3是各自的div區塊 所以是上下 -->
+        <div class="box1 ">
+            <div class="box2">box2</div>
+            <div class="box3">box3</div>
+        </div>
+    </div>
+
+
+          <script	src="./js/bootstrap.bundle.min.js"></script>
+        </body>
+    </html>

@@ -1,0 +1,86 @@
+﻿body {
+  font-family: Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+
+h1 {
+  color: white; font-weight: bold; font-size: 36px;
+  text-align: center; background-color: lightgreen;
+}
+
+.yellow-futo {
+  background: linear-gradient(transparent 65%, yellow 65%);
+}
+
+.kadomaru-box {
+  background-color: lightgrey; max-width: 300px;
+  text-align: center; border-radius: 5px;
+}
+
+.cv-contents {
+  max-width: 800px;
+  line-height: 36px;
+}
+
+.cv-contents figure { /* cv-contentsが指定されている中にあるfigureタグだけに効果を出す */
+  float: left; 
+  max-width: 350px;
+}
+
+.cv-contents blockquote { /* cv-contentsが指定されている中にあるblockquoteタグだけに効果を出す */
+  text-align: left;
+}
+
+.clearfix:after {
+  content: ""; 
+  display: block;
+  clear: both;
+}
+
+a {
+  background-color: blue; color: white; font-size: 20px;
+  text-align: center; border-radius: 5px;
+  text-decoration: none; max-width: 300px;
+  display:block;
+  animation: prunprun 2.2s ease-in infinite;
+  -webkit-animation: prunprun 2.2s ease-in infinite;
+  -moz-animation: prunprun 2.2s ease-in infinite;
+  -o-animation: prunprun 2.2s ease-in infinite;
+  -ms-animation: prunprun 2.2s ease-in infinite;
+}
+
+@keyframes prunprun {
+48%, 62% {transform: scale(1.0, 1.0);}
+50% {transform: scale(1.1, 0.9);}
+56% {transform: scale(0.9, 1.1) translate(0, -5px);}
+59% {transform: scale(1.0, 1.0) translate(0, -3px);}
+}
+
+@-webkit-keyframes prunprun {
+48%, 62% {-webkit-transform: scale(1.0, 1.0);}
+50% {-webkit-transform: scale(1.1, 0.9);}
+56% {-webkit-transform: scale(0.9, 1.1) translate(0, -5px);}
+59% {-webkit-transform: scale(1.0, 1.0) translate(0, -3px);}
+}
+
+a:hover {
+  background-color: darkblue; color: white;
+}
+a:active {
+  background-color: pink; color: white;
+}
+
+@media screen and (max-width:600px) {
+  body {font-size: 1.6vw;}
+
+  h1 {font-size: 3.6vw;}
+
+  a {font-size: 5.0vw;}
+
+  img {max-width: 100%;}
+
+  .cv-contents figure {
+    float: none;
+    max-width: 200px;
+  }
+
+}

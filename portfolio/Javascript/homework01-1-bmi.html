@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI</title>
+  </head>
+
+  <body>
+    <!-- 看得到的東西(input,button,容器) -->
+    <!-- 輸入的數字會變成value，如果你自己填value，則為預設值 -->
+    <input type="text" id="weight" value="" />公斤
+    <input type="text" id="height" value="" />公分
+
+    <!-- onclick="bmi()"(引號內放function) -->
+    <button onclick="bmi()">caculate</button>
+
+    <!-- 想像
+  (1)頁面有個空盒子可放字，幫此盒子命名(用class/id皆可)
+  (2)可以把這個值從盒子取出，放在JS變數裡
+  (3)d!=display -->
+    <div id="display"></div>
+
+    <script>
+      // 宣告變數
+      // 建立一個變數叫做w 裡面存入一個值(<input type="text" id="weight" value="">)
+      const w = document.querySelector("#weight");
+      const h = document.querySelector("#height");
+
+      //宣告函式 declare a function(範圍{})
+      function bmi() {
+        // 原本w.value引入的東西可以想像是字串，所以要轉為數值，所以變數名要設wNum使用parseInt轉為數值
+        // 宣告變數
+        let wNum = parseInt(w.value);
+        let hNum = parseInt(h.value) / 100;
+        // 錯誤一 沒有轉成value bmi = <input type="text" id="weight" value="40">  / (<input type="text" id="height" value="1.7">) * (<input type="text" id="height" value="">)
+        // 錯誤二 沒有轉成數字 bmi = "40" / "1.7" * "1.7"
+        // 正確 bmi = 40 / (1.7 * 1.7)
+
+        // console.log(typeof wNum);
+
+        // 宣告變數
+        let result = wNum / (hNum * hNum);
+        // result = 100 / (50 * 50);
+
+        if (result < 18.5) {
+          display.innerHTML = `過輕 BMI為${result}`; // innerHTML呈現在網頁上的字要加``,=`文字 bmi=${result}`,
+        } else if (result < 24) {
+          //也可寫成bmi >= 18.5 && bmi < 24，只留bmi<24是因為前面的已被排除
+          display.innerHTML = `正常 BMI為${result}`;
+        } else if (result < 27) {
+          display.innerHTML = `過重 BMI為${result}`;
+        } else if (result < 30) {
+          display.innerHTML = `輕度肥胖 BMI為${result}`;
+        } else if (result < 35) {
+          display.innerHTML = `中度肥胖 BMI為${result}`;
+          // 最後一群不用寫條件式即可判定
+        } else {
+          display.innerHTML = `重度肥胖 BMI為${result}`;
+        }
+      }
+
+      let a = document.querySelector("#id")
+
+    </script>
+  </body>
+</html>

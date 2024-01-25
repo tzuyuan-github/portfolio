@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>使用偽元素繪製menu icon</title>
+  <style>
+    .menu {
+      background-color: rgb(85, 55, 112);
+      width: 3em;
+      height: 3em;
+      margin: auto;
+
+      margin-top: 10em;
+      border: 1em solid #917a9ec9;
+      /* 滑鼠游標 */
+      cursor: pointer;
+      position: relative;
+    }
+
+    .menu:after {
+      position: absolute;
+      content: "";
+      width: 1em;
+      height: 0.2em;
+      top: 1em;
+      left: 1em;
+      border-top: 0.6em double #fff;
+      border-bottom: 0.2em solid #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="menu"></div>
+</body>
+
+</html>

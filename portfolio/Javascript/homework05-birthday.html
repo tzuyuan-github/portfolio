@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday</title>
+</head>
+
+<body>
+    <!-- 
+        讓使用者輸入生日計算目前幾歲
+    -->
+    <input type="date" name="birthday" id="birthday" onchange="calage()">
+    <div id="info"></div>
+
+    <script>
+        const myInput = document.querySelector('#birthday');
+
+        function calage() {
+            console.log(myInput.value);
+            const d = new Date(myInput.value);
+            info.innerHTML = d.toString() + '<br>';
+
+            // 一天的毫秒數: 1000*60*60*24=86400000
+            const msec = Date.now() - d;
+            info.innerHTML += `年紀:${parseInt(msec / (86400000 * 365))}歲`
+        }
+
+    </script>
+</body>
+
+</html>

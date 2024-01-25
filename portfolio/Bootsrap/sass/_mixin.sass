@@ -1,0 +1,37 @@
+$xsmall-media:576px
+$small-media:768px
+$medium-media:992px
+$large-media:1200px
+$xlarge-media:1400px
+
+@mixin xs-width()
+    @media (min-width: $xsmall-media)
+        @content
+@mixin sm-width()
+    @media (min-width: $small-media)
+        @content                
+@mixin md-width()
+    @media (min-width: $medium-media)
+        @content   
+@mixin lg-width()
+    @media (min-width: $large-media)
+        @content
+@mixin xxl-width()
+    @media (min-width: $xlarge-media)
+        @content    
+
+@mixin hnpx($n)
+    .h#{$n}px
+        height: #{$n}px
+
+@mixin wnpx($n)
+    .w#{$n}px
+        width: #{$n}px
+
+@mixin bgc($name, $color)
+    .#{$name}
+        background-color: #{$color}
+
+@mixin textc($name, $color)
+    .#{$name}
+        color: #{$color}

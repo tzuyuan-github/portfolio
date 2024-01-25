@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis&family=Mukta:wght@300&display=swap");
+/* font-family: 'Mukta', sans-serif; 
+      font-family: 'Dosis';
+  */
+/* 電腦與平板上應用的樣式 */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(237, 237, 237);
+  margin: 0px;
+  padding: 0px;
+  font-size: 14px;
+  font-family: "Mukta";
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Mukta";
+}
+
+/* 頁首(header、logo、navbar、menu) */
+.header {
+  background-color: rgb(190, 170, 190);
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+/* logo */
+.logo {
+  width: 100px;
+  background-color: rgb(112, 96, 129);
+  text-align: center;
+  padding: 10px;
+}
+.logo a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Mukta";
+}
+/* 清單 */
+ul {
+  list-style: none;
+}
+ul li a {
+  font-size: 18px;
+  font-weight: bold;
+}
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+.navbar > ul {
+  display: flex;
+}
+.navbar ul li a {
+  font-size: 18px;
+  font-weight: bold;
+  width: 120px;
+  height: 100%;
+  display: flex;
+  /* 左右置中 */
+  justify-content: center;
+  /* 上下置中 */
+  align-items: center;
+  background-color: rgb(126, 112, 126);
+}
+.navbar ul li a:hover {
+  background-color: rgb(94, 83, 94);
+  color: #fff;
+}/* menu */
+.menu-icon {
+  display: none;
+  width: 100px;
+  font-size: 20px;
+  font-family: "Mukta";
+  background-color: rgb(128, 99, 128);
+}
+.menu-icon a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* section1(about-photo,profile,education,skill) */
+section {
+  padding: 50px auto;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#about {
+  background-color: rgba(221, 221, 225, 0.767);
+}
+.photo img {
+  /* 設max-width,可photo img也可img */
+  max-width: 100%;
+}
+.photo {
+  /* height拿掉為了符合外容器 */
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 100px;
+  padding-bottom: 300px;
+  /* cursor: url(https://i.pinimg.com/564x/a4/f3/20/a4f320d22dbed3c95371836e8fac86c4.jpg); */
+}
+.my-img {
+  width: 500px;
+  box-shadow: -10px 10px 0px #684f69;
+}
+.description {
+  /* height拿掉為了符合外容器 */
+  width: 600px;
+  background-color: rgba(158, 142, 158, 0.795);
+  padding: 50px;
+}
+.divider{
+  font-size: 15px;
+  color: #6b696b;
+}
+.profile{
+  font-size: 18px;
+}
+.education{
+  font-size: 17px;
+}
+.education-list{
+  padding-left: 30px;
+}
+.skill-list li{
+    padding: 5px ;
+margin-left: 50px;
+}
+.skills{
+  font-size: 17px;
+  height: 200px;
+  width: 300px;
+  background-color: rgba(173, 152, 192, 0.822);
+  display: flex;
+  align-items: center;
+}
+.skillword{
+  margin-left: 130px;
+}
+.skill-name{
+    /* 要變成區塊寬度才有效 */
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    width: 200px;
+    padding-left: 100px;
+    
+}
+.skill-bar{
+    display: inline-block;
+    width: 250px;
+    height: 20px;
+    background-color: #684f69;
+    border-radius: 30px;
+    box-shadow: 1px 1px 5px #999 inset;
+    /* 要加relative */
+    position: relative;
+    margin-left: 100px;
+}
+.skill-level-marketing-management{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80%;
+    height: 20px;
+    background-color: rgba(208, 127, 255, 0.479);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.skill-level-microsoft-office{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 85%;
+  height: 20px;
+  background-color: rgba(208, 127, 255, 0.479);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.skill-level-edit-videos{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80%;
+  height: 20px;
+  background-color: rgba(208, 127, 255, 0.479);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.skill-level-erp{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80%;
+  height: 20px;
+  background-color: rgba(208, 127, 255, 0.479);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* section2(experience) */
+.company-logo{
+  width: 200px;
+}
+.company-logo img{
+  max-width: 100%;
+}
+
+/* section3 */
+.s3{
+  font-size: 20px;
+  color:#3a283ade;
+  display:flex;
+  justify-content: center;
+}
+#portfolio {
+  background-color: rgba(70, 49, 95, 0.726);
+}
+.img {
+  width: 30%;
+  max-width: 100%;
+  height: 300px;
+  background-color: rgba(173, 152, 192, 0.822);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.text {
+  width: 30%;
+  height: 300px;
+  background-color: rgba(206, 172, 193, 0.753);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+/* 折行 */
+.wrap {
+  flex-wrap: wrap;
+}
+
+/* footer */
+footer {
+  background-color: black;
+}
+footer p {
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-family: "Mukta";
+}
+
+
+
+/* 手機 */
+@media screen and (max-width: 500px) {
+  .menu-icon {
+    display: block;
+  }
+  .navbar {
+    width: 100%;
+  }
+  .navbar > ul {
+    flex-direction: column;
+  }
+  /* 父容器寬度設100%撐高寬度 */
+  .navbar > ul,
+  .navbar ul li {
+    width: 100%;
+  }
+  .navbar ul li a {
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgba(120, 106, 151, 0.705);
+    border-bottom: 1px solid #333333c0;
+  }
+  /* container */
+  .container {
+    flex-direction: column;
+  }
+}
+.photo,
+.description {
+  width: 100%;
+  margin: auto;
+}
+.photo,
+.description,
+.skill {
+  margin-bottom: 30px;
+}
+section {
+  padding: 50px 20px;
+}
+#portfolio .container {
+  flex-direction: row;
+}
+/* 2%是邊框,兩欄各48% */
+.img,
+.text {
+  width: 48%;
+}
+.text:nth-child(1) {
+  order: 1;
+  background-color: lightblue;
+}
+.photo-list > li:nth-child(2) {
+  order: 2;
+}
+.photo-list > li:nth-child(3) {
+  order: 4;
+}
+.photo-list > li:nth-child(4) {
+  order: 3;
+}
+.photo-list > li:nth-child(5) {
+  order: 5;
+}
+.photo-list > li:nth-child(6) {
+  order: 6;
+}
+
+
+
+
+
+
+/* 平板 */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>10slider.html</title>
+    <link
+      rel="stylesheet"
+      href="../css/fontawesome-free-6.4.2-web/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .wrapper {
+        position: relative;
+        width: 800px;
+        height: 300px;
+        overflow: hidden;
+        margin: 0 auto;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+      }
+      li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      ul.slides {
+        width: 3200px;
+        left: 0px;
+        transition: all 0.5s;
+      }
+      ul.slides li {
+        width: 800px;
+        height: 300px;
+        overflow: hidden;
+        float: left;
+      }
+      ul.slides li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .dot {
+        bottom: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .dot li {
+        border: 1px solid #fff;
+        /* border-radius: 50%; */
+        margin: 0 5px;
+        width: 24px;
+        height: 10px;
+      }
+      .dot li:hover {
+        background: #fff;
+      }
+      .slide_btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        bottom: 0;
+        width: 30px;
+        color: #fff;
+        position: absolute;
+        font-size: 24px;
+      }
+      #prevSlide {
+        left: 0;
+      }
+      #nextSlide {
+        right: 0;
+      }
+      .slide_btn i {
+        color: rgba(255, 255, 255, 0.6);
+        transition: 0.5s;
+      }
+      .slide_btn:hover i {
+        color: rgba(255, 255, 255, 1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <ul class="slides">
+        <li><img src="imgs/slide1.jpg" alt="" /></li>
+        <li><img src="imgs/slide2.jpg" alt="" /></li>
+        <li><img src="imgs/slide3.jpg" alt="" /></li>
+        <li><img src="imgs/slide4.jpg" alt="" /></li>
+      </ul>
+      <ul class="dot">
+        <li id="1"></li>
+        <li id="2"></li>
+        <li id="3"></li>
+        <li id="4"></li>
+      </ul>
+      <div id="prevSlide" class="slide_btn">
+        <i class="fa-solid fa-caret-left"></i>
+      </div>
+      <div id="nextSlide" class="slide_btn">
+        <i class="fa-solid fa-caret-right"></i>
+      </div>
+    </div>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+      let slideNum = 0; //   宣告變數投影編號=0表索引
+      function show() {
+        $(".dot li")
+          .eq(slideNum) // 選取第幾個元素
+          .css("background-color", "#fff") //   被選取到的呈現白色
+          .siblings() //   兄弟姐妹
+          .css("background-color", "transparent"); //   沒被選取到的呈現透明色
+        let slidemove = 0 - 800 * slideNum; // 宣告變數圖片往左移動一張圖的距離
+        $("ul.slides").css("left", slidemove);
+      }
+
+      let slideCount = $(".slides li").length; //   length表個數，這邊指輪播的照片總共有幾張4
+      let lastIndex = slideCount - 1; //   個數-1表索引
+
+      //   index用法：$(this).index() >> 索引幾號,index括號內不能放數字
+      //   eq用法：$(this).eq(2) >> 指向2號索引
+      $(".dot li").eq(0).css("background-color", "white");
+      $(".dot li").mouseenter(function () {
+        slideNum = $(this).index();
+        show();
+      });
+
+      $("#prevSlide").click(function () {
+        slideNum--; // --表-1
+        if (slideNum < 0) {
+          slideNum = lastIndex;
+        }
+        show();
+      });
+      $("#nextSlide").click(function () {
+        slideNum++;
+        if (slideNum > lastIndex) {
+          slideNum = 0;
+        }
+        show();
+      });
+
+      //   方法一.
+      //   設定時間間隔,將slideNum++的function放進來
+      let setinter = setInterval(function () {
+        // 要指定給一個對象才能把自動輪播這件事取消掉，所以let setinter
+        slideNum++;
+        if (slideNum > lastIndex) {
+          slideNum = 0;
+        }
+        show();
+      }, 3000);
+      //   滑鼠碰到取消
+      $("img").hover(
+        function () {
+          clearInterval(setinter);
+        },
+        function () {
+          setinter = setInterval(() => {
+            slideNum++;
+            if (slideNum > lastIndex) {
+              slideNum = 0;
+            }
+            show();
+          }, 3000);
+        }
+      );
+
+      // 方法二.
+      // 設定時間間隔,將click右滑動作的function放進來
+      // let setinter = setInterval(function () {
+      // $("#nextSlide").click();
+      // }, 3000);
+      // 滑鼠碰到取消
+      // $("img").hover(
+      //   function () {
+      //     clearInterval(setinter);
+      //   },
+      //   function () {
+      //     setinter = setInterval(function () {
+      //       $("#nextSlide").click();
+      //     }, 3000);
+      //   }
+      // );
+    </script>
+  </body>
+</html>

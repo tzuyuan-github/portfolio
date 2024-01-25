@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login表單</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap" rel="stylesheet">
+  <style>
+    .container {
+      margin: auto;
+      background-color: rgb(233, 233, 233);
+      width: 450px;
+      height: 280px;
+      border-top-left-radius: 15px;
+      padding: 50px;
+      /* 彈性盒子 */
+      display: flex;
+      /* 彈性盒子垂直排列 */
+      flex-direction: column;
+      /* 彈性盒子對齊中間 */
+      justify-content: center;
+    }
+
+    h3 {
+      margin: 5px;
+      font-family: 'Mukta', sans-serif;
+      font-size: 35px;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* 標籤選擇器也可使用input[type="text"], input[type="password"] */
+    .keyin1 {
+      width: 430px;
+      height: 50px;
+      border: none;
+      padding: 5px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+
+    .keyin2 {
+      width: 430px;
+      height: 50px;
+      border: none;
+      padding: 5px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+
+    .button {
+      width: 150px;
+      height: 50px;
+      border: none;
+      color: white;
+      background-color: rgba(75, 61, 87, 0.747);
+      font-size: 20px;
+      border-radius: 6px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+    
+    /* Forgot your password往右推 */
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .bottom a {
+      text-decoration: none;
+      color: black;
+      font-size: 16px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h3>Login Information</h3>
+    <input class="keyin1" type="text" name="Username" placeholder="Enter Username">
+    <input class="keyin2" type="password" name="Password" placeholder="Enter Password">
+    <div class="bottom">
+      <input class="button" type="submit" name="Login" value="Log in">
+      <a href="">Forgot your password?</a>
+    </div>
+  </div>
+</body>
+
+</html>

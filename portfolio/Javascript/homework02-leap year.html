@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>閏年</title>
+  </head>
+  <body>
+    <h1>判斷是否為閏年</h1>
+    <label for="inputyear">輸入西元年：</label>
+    <input type="number" name="inputyear" id="year" />
+    <!-- <input> 的id 屬性用來指定送出去的該筆資料要用什麼名稱，目的是讓遠端伺服器才能透過明確定義好的名稱去取出對應的欄位值。 -->
+    <button id="enter">送出</button>
+    <div id="result"></div>
+    <script>
+      // Q會有哪些東西需要變數,變數通常怎麼命名
+      // Q為何不用const
+      let year = document.querySelector("#year");
+      let enter = document.querySelector("#enter");
+      let result = document.querySelector("#result");
+
+      // Q事件聆聽要放在哪裡 A哪裡都可以
+      // Qresult.innerHTML=res;等號後面為何放變數
+      // Qlet res= checkYear(year.value);等號後方的checkYear是代表什麼
+      // 事件聆聽、箭頭函式
+      /* DOM Level 0 - DOM Object Property
+ DOM 元素 API 也有對應的屬性，可以用來綁定事件處理函式。 */
+      /*DOM Level 2 - Element.addEventListener(eventType, listener)
+addEventListener 方法可以用來綁定元素的事件處理函數，第一個參數 eventType 是事件名稱，第二個參數 listener 是事件處理函數。*/
+
+// 事件聆聽用法：element.addEventListener(event, function, useCapture);
+      enter.addEventListener("click", () => {
+        let res = checkYear(year.value);
+        result.innerHTML = res; //
+      });
+
+      // Qfunction內是固定放變數、if、return嗎
+      function checkYear(a) {
+        // Q變數後方到底要放什麼(有時是一個值、有時是計算方式、有時是一段文字加數字)
+        // Q`${a}為平年`{}內是要放a還是year.value
+        /*西元年能被 400 整除，為閏年。
+        西元年能被 4 整除，但不能被 100 整除，為閏年。*/
+        let res = `${a}為平年`;
+        if (a % 400 === 0 || (a % 4 === 0 && a % 100 > 0)) {
+          res = `${a}為閏年`; //
+        }
+        return res; //
+      }
+    </script>
+  </body>
+</html>
+
+<!-- 參數概念
+function add(a,b) {
+
+  return a + b
+} -->
