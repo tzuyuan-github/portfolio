@@ -18,7 +18,7 @@
       }
 
       .clock {
-        background-color: cyan;
+        background-color: rgb(182, 160, 205);
         width: 600px;
         height: 600px;
         border-radius: 50%;
@@ -64,33 +64,40 @@
     </div>
 
     <script>
+      // 選取時鐘的三個指針元素
       const secHand = document.querySelector(".sec-hand");
       const minHand = document.querySelector(".min-hand");
       const hrHand = document.querySelector(".hr-hand");
+      // 選取時鐘的外層元素
       const clock = document.querySelector(".clock");
-
+      // 定義一個函數 runClock，用於更新時鐘的指針位置
       function runClock() {
+        // 獲取當前日期和時間
         const date = new Date();
+        // 從當前時間中提取小時、分鐘和秒
         const hr = date.getHours();
         const min = date.getMinutes();
         const sec = date.getSeconds();
         const milSec = date.getMilliseconds();
-
+        // 計算秒針應該旋轉的角度。每秒旋轉6度，加上毫秒的細分
         const secRotate = sec * 6 + milSec * (6 / 1000);
+        // 計算分針旋轉的角度，考慮分、秒和毫秒的累積影響
         const minRotate = min * 6 + sec * (6 / 60) + (milSec * (6 / 60)) / 1000;
+        // 計算時針旋轉的角度，考慮時、分、秒和毫秒的累積影響
         const hrRotate =
           hr * 30 +
           min * (30 / 60) +
           (sec * (30 / 60)) / 60 +
           (milSec * (30 / 60)) / 60 / 1000;
-
+        // 將計算出的旋轉角度應用於時鐘的三個指針
         secHand.style.transform = `rotate(${secRotate}deg)`;
         minHand.style.transform = `rotate(${minRotate}deg)`;
         hrHand.style.transform = `rotate(${hrRotate}deg)`;
       }
 
+      // 使用 setInterval 每1毫秒呼叫 runClock 函數，持續更新時鐘指針
       setInterval(runClock, 1);
-
+      // 使用迴圈創建時鐘的分鐘刻度，每分鐘刻度旋轉6度
       for (let i = 0; i < 60; i++) {
         const mark = document.createElement("div");
         mark.style.backgroundColor = `black`;
@@ -104,6 +111,7 @@
         clock.append(mark);
       }
 
+      // 使用迴圈創建時鐘的小時刻度，每小時刻度旋轉30度
       for (let k = 0; k < 12; k++) {
         const markHr = document.createElement("div");
         markHr.style.backgroundColor = `black`;
@@ -117,6 +125,7 @@
         clock.append(markHr);
       }
 
+      // 使用迴圈創建並放置時鐘上的數字
       for (let j = 0; j < 12; j++) {
         const num = document.createElement("div");
         const angUnit = (Math.PI * 2) / 12;
