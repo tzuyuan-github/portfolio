@@ -79,7 +79,7 @@ ul li a {
 .navbar ul li a:hover {
   background-color: rgb(94, 83, 94);
   color: #fff;
-}/* menu */
+} /* menu */
 .menu-icon {
   display: none;
   width: 100px;
@@ -135,24 +135,24 @@ section {
   background-color: rgba(158, 142, 158, 0.795);
   padding: 50px;
 }
-.divider{
+.divider {
   font-size: 15px;
   color: #6b696b;
 }
-.profile{
+.profile {
   font-size: 18px;
 }
-.education{
+.education {
   font-size: 17px;
 }
-.education-list{
+.education-list {
   padding-left: 30px;
 }
-.skill-list li{
-    padding: 5px ;
-margin-left: 50px;
+.skill-list li {
+  padding: 5px;
+  margin-left: 50px;
 }
-.skills{
+.skills {
   font-size: 17px;
   height: 200px;
   width: 300px;
@@ -160,56 +160,29 @@ margin-left: 50px;
   display: flex;
   align-items: center;
 }
-.skillword{
+.skillword {
   margin-left: 130px;
 }
-.skill-name{
-    /* 要變成區塊寬度才有效 */
-    display: inline-block;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    width: 200px;
-    padding-left: 100px;
-    
+.skill-name {
+  /* 要變成區塊寬度才有效 */
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  width: 200px;
+  padding-left: 100px;
 }
-.skill-bar{
-    display: inline-block;
-    width: 250px;
-    height: 20px;
-    background-color: #684f69;
-    border-radius: 30px;
-    box-shadow: 1px 1px 5px #999 inset;
-    /* 要加relative */
-    position: relative;
-    margin-left: 100px;
-}
-.skill-level-marketing-management{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 80%;
-    height: 20px;
-    background-color: rgba(208, 127, 255, 0.479);
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-}
-.skill-level-microsoft-office{
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 85%;
+.skill-bar {
+  display: inline-block;
+  width: 250px;
   height: 20px;
-  background-color: rgba(208, 127, 255, 0.479);
+  background-color: #684f69;
   border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
+  box-shadow: 1px 1px 5px #999 inset;
+  /* 要加relative */
+  position: relative;
+  margin-left: 100px;
 }
-.skill-level-edit-videos{
+.skill-level-marketing-management {
   position: absolute;
   left: 0;
   top: 0;
@@ -222,7 +195,33 @@ margin-left: 50px;
   align-items: center;
   color: #fff;
 }
-.skill-level-erp{
+.skill-level-microsoft-office {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 85%;
+  height: 20px;
+  background-color: rgba(208, 127, 255, 0.479);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.skill-level-edit-videos {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80%;
+  height: 20px;
+  background-color: rgba(208, 127, 255, 0.479);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.skill-level-erp {
   position: absolute;
   left: 0;
   top: 0;
@@ -237,18 +236,18 @@ margin-left: 50px;
 }
 
 /* section2(experience) */
-.company-logo{
+.company-logo {
   width: 200px;
 }
-.company-logo img{
+.company-logo img {
   max-width: 100%;
 }
 
 /* section3 */
-.s3{
+.s3 {
   font-size: 20px;
-  color:#3a283ade;
-  display:flex;
+  color: #3a283ade;
+  display: flex;
   justify-content: center;
 }
 #portfolio {
@@ -290,40 +289,11 @@ footer p {
   font-family: "Mukta";
 }
 
-
-
-/* 手機 */
-@media screen and (max-width: 500px) {
-  .menu-icon {
-    display: block;
-  }
-  .navbar {
-    width: 100%;
-  }
-  .navbar > ul {
-    flex-direction: column;
-  }
-  /* 父容器寬度設100%撐高寬度 */
-  .navbar > ul,
-  .navbar ul li {
-    width: 100%;
-  }
-  .navbar ul li a {
-    width: 100%;
-    line-height: 40px;
-    text-align: center;
-    background-color: rgba(120, 106, 151, 0.705);
-    border-bottom: 1px solid #333333c0;
-  }
-  /* container */
-  .container {
-    flex-direction: column;
-  }
-}
 .photo,
 .description {
   width: 100%;
-  margin: auto;
+  padding-right: 0; /* 移除右側的padding */
+  padding-bottom: 20px; /* 調整底部的padding */
 }
 .photo,
 .description,
@@ -361,11 +331,193 @@ section {
   order: 6;
 }
 
+/* 手機 */
+@media screen and (max-width: 500px) {
+  .menu-icon {
+    display: block;
+  }
+  .navbar {
+    width: 100%;
+  }
+  .navbar > ul {
+    flex-direction: column;
+  }
+  /* 父容器寬度設100%撐高寬度 */
+  .navbar > ul,
+  .navbar ul li {
+    width: 100%;
+  }
+  .navbar ul li a {
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgba(120, 106, 151, 0.705);
+    border-bottom: 1px solid #333333c0;
+  }
+  /* container */
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills {
+    width: 90%;
+  }
+  .skill-list li {
+    margin-left: 0;
+  }
+  .skill-name,
+  .skill-bar {
+    width: 100%;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .experience-list li {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
+  #photo-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .text {
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
 
+  /* 調整圖片寬度，避免超出螢幕 */
+  .img {
+    width: 90%;
+    max-width: 100%;
+    height: auto;
+    background-color: rgba(173, 152, 192, 0.822);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
+  /* 先將.company-logo的寬度設定為100% */
+  .company-logo {
+    width: 30%;
+  }
 
+  /* 接著可以調整圖片在.company-logo中的位置，例如居中顯示 */
+  .company-logo img {
+    display: block;
+    margin-left: 160px; /* 水平居中 */
+    max-width: 100%;
+  }
+
+  .skills {
+    font-size: 17px;
+    height: auto; /* 移除固定高度 */
+    width: 80%;
+    background-color: rgba(173, 152, 192, 0.822);
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    align-items: center;
+  }
+
+  .skill-list li {
+    padding: 5px;
+    margin-left: 0; /* 移除左側的margin */
+  }
+
+  .skill-name {
+    /* 要變成區塊寬度才有效 */
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    padding-left: 0; /* 移除左側的padding */
+    margin-left: 0; /* 移除左側的margin */
+  }
+
+  .skill-bar {
+    display: inline-block;
+    width: 100%; /* 100%寬度 */
+    height: 20px;
+    background-color: #684f69;
+    border-radius: 30px;
+    box-shadow: 1px 1px 5px #999 inset;
+    /* 要加relative */
+    position: relative;
+  }
+
+  
+}
 
 /* 平板 */
 @media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header {
+    flex-direction: column;
+    align-items: center; /* 確保子元素在中心對齊 */
+    padding: 0; /* 移除header的內邊距 */
+  }
+  .logo {
+    width: 100%; /* 設置logo寬度為100% */
+    margin-bottom: 10px; /* 設置底部邊距，與navbar區分開 */
+    padding: 10px 0; /* 上下padding */
+  }
+  .navbar {
+    width: 100%;
+    justify-content: center;
+    background-color: rgb(126, 112, 126); /* 給navbar添加背景色，可以選擇遮蓋header */
+    margin-top: -10px; /* 讓navbar與header緊密結合，或者增加此值以分開兩者 */
+    z-index: 1; /* 確保navbar在header之上 */
+    position: relative; /* 用於z-index生效 */
+  }
+  .navbar > ul {
+    width: 100%; /* 設置ul寬度為100% */
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    flex-direction: row; /* 水平排列 */
+  }
+ 
+  .navbar ul li a {
+    display: flex;
+    align-items: center; /* 新增此行以實現垂直居中 */
+    justify-content: center; /* 水平居中 */
+    height: 50px; /* 設定一個固定高度 */
+    padding: 0 20px; /* 調整左右內邊距，上下內邊距設為0 */
+    margin: 0;
+    font-size: 18px; /* 調整字體大小，如有需要 */
+    font-weight: bold;
+    background-color: rgb(126, 112, 126); /* 背景色 */
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .resume {
+    padding: 20px;
+    /* 增加邊距，防止文字被切掉 */
+  }
+  
+  .img,
+  .text {
+    width: 80%;
+    max-width: 100%;
+    height: auto;
+  }
+  .company-logo {
+    width: 50%;
+  }
+  .company-logo img {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+  /* 調整 my portfolio 下方圖片位置 */
+  #portfolio .img {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
